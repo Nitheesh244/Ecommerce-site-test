@@ -45,12 +45,14 @@
 <!-- Contact Form -->
 <section class="contact-section">
   <h2>Contact Us</h2>
-  <form id="contactForm">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Submit</button>
-    <p class="success-msg" id="formSuccess">Thank you! We’ll get back to you soon.</p>
+  <form name="contact" method="POST" netlify>
+  <input type="hidden" name="form-name" value="contact">
+  
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+  
+  <button type="submit">Submit</button>
   </form>
 </section>
 
