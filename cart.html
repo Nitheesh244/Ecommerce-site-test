@@ -4,49 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Your Cart - ShopSmart</title>
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86F93NCTE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S86F93NCTE');
+  </script>
+
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .cart-container {
-      padding: 30px;
-    }
-
-    .cart-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-    }
-
-    .cart-item img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-right: 20px;
-    }
-
-    .item-info h4 {
-      margin-bottom: 8px;
-    }
-
-    .item-info button {
-      background: #d32f2f;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    #total-price {
-      font-size: 20px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-  </style>
 </head>
 <body onload="loadCart()">
 
@@ -71,5 +39,6 @@
 <footer>&copy; 2025 ShopSmart. All rights reserved.</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
