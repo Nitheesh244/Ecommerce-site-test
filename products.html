@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSmart - Products</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <img src="logo.png" alt="Logo">
+    <div class="logo">ShopSmart</div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Explore Our Products</h2>
+
+  <!-- Product 1 -->
+  <div class="product-box">
+    <img src="shoes.jpg" alt="Running Shoes">
+    <div class="details">
+      <h3>Running Shoes</h3>
+      <p class="desc">Breathable mesh shoes for daily running. Lightweight & durable.</p>
+      <p class="price">₹1,999</p>
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" id="qty-shoes">
+      <button class="add-btn" onclick="addToCart('Running Shoes', 1999, 'shoes.jpg', 'qty-shoes')">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="product-box">
+    <img src="bag.jpg" alt="Smart Backpack">
+    <div class="details">
+      <h3>Smart Backpack</h3>
+      <p class="desc">Trendy backpack with laptop compartment. Splash resistant & stylish.</p>
+      <p class="price">₹1,499</p>
+      <label>Quantity:</label>
+      <input type="number" min="1" value="1" id="qty-bag">
+      <button class="add-btn" onclick="addToCart('Smart Backpack', 1499, 'bag.jpg', 'qty-bag')">Add to Cart</button>
+    </div>
+  </div>
+
+</div>
+
+<footer>&copy; 2025 ShopSmart. All rights reserved.</footer>
+
+<!-- Cart Logic -->
+<script src="script.js"></script>
+
+</body>
+</html>

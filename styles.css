@@ -1,0 +1,281 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f1f3f6;
+}
+
+/* Header */
+header {
+  background-color: #2874f0;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-area img {
+  height: 60px;
+  width: auto;
+  margin-right: 15px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #2874f0;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Banner Section */
+.banner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.banner img.active {
+  opacity: 1;
+}
+
+/* Tagline */
+.tagline {
+  padding: 30px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+/* Product Section */
+.container {
+  padding: 30px;
+}
+
+.product-box {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-box img {
+  width: 250px;
+  height: auto;
+  margin-right: 25px;
+  border-radius: 8px;
+}
+
+.details {
+  flex: 1;
+}
+
+.details h3 {
+  margin-bottom: 8px;
+}
+
+.desc {
+  color: #555;
+  margin: 10px 0;
+}
+
+.price {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 6px;
+  margin-bottom: 10px;
+}
+
+.add-btn {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cart Page */
+.cart-container {
+  padding: 30px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.item-info h4 {
+  margin-bottom: 8px;
+}
+
+.item-info button {
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#total-price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Contact Form */
+.contact-section {
+  background: white;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2874f0;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section input,
+.contact-section textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-section button {
+  background: #2874f0;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-section button:hover {
+  background: #1f5fc2;
+}
+
+.success-msg {
+  color: green;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .product-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-box img {
+    margin: 0 0 15px 0;
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin-bottom: 10px;
+  }
+}

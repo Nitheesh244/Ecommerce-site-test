@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSmart - Home</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .contact-section {
+      background: white;
+      padding: 40px 20px;
+      margin: 40px auto;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #2874f0;
+    }
+
+    .contact-section form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .contact-section button {
+      background: #2874f0;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact-section button:hover {
+      background: #1f5fc2;
+    }
+
+    .success-msg {
+      color: green;
+      text-align: center;
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-area">
+    <img src="logo.png" alt="Logo">
+    <div class="logo">ShopSmart</div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<!-- Banner -->
+<div class="banner">
+  <img src="banner1.jpg" class="active" alt="Banner 1">
+  <img src="banner2.jpg" alt="Banner 2">
+  <img src="banner3.jpg" alt="Banner 3">
+</div>
+
+<!-- Tagline -->
+<div class="tagline">
+  Your one-stop destination for smart fashion & gear!
+</div>
+
+<!-- Contact Form Section -->
+<section class="contact-section">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
+    <p class="success-msg" id="formSuccess">Thank you! We’ll get back to you soon.</p>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer>&copy; 2025 ShopSmart. All rights reserved.</footer>
+
+<!-- Scripts -->
+<script>
+  const banners = document.querySelectorAll(".banner img");
+  let current = 0;
+  setInterval(() => {
+    banners[current].classList.remove("active");
+    current = (current + 1) % banners.length;
+    banners[current].classList.add("active");
+  }, 4000);
+
+  // Contact Form Script
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("formSuccess").style.display = "block";
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
