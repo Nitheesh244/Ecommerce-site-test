@@ -4,58 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ShopSmart - Home</title>
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S86F93NCTE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-S86F93NCTE');
+  </script>
+
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .contact-section {
-      background: white;
-      padding: 40px 20px;
-      margin: 40px auto;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-section h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #2874f0;
-    }
-
-    .contact-section form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .contact-section input,
-    .contact-section textarea {
-      margin-bottom: 15px;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .contact-section button {
-      background: #2874f0;
-      color: white;
-      border: none;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .contact-section button:hover {
-      background: #1f5fc2;
-    }
-
-    .success-msg {
-      color: green;
-      text-align: center;
-      display: none;
-      margin-top: 10px;
-    }
-  </style>
 </head>
 <body>
 
@@ -83,7 +42,7 @@
   Your one-stop destination for smart fashion & gear!
 </div>
 
-<!-- Contact Form Section -->
+<!-- Contact Form -->
 <section class="contact-section">
   <h2>Contact Us</h2>
   <form id="contactForm">
@@ -95,11 +54,10 @@
   </form>
 </section>
 
-<!-- Footer -->
 <footer>&copy; 2025 ShopSmart. All rights reserved.</footer>
 
-<!-- Scripts -->
 <script>
+  // Auto-scroll banner
   const banners = document.querySelectorAll(".banner img");
   let current = 0;
   setInterval(() => {
@@ -108,7 +66,7 @@
     banners[current].classList.add("active");
   }, 4000);
 
-  // Contact Form Script
+  // Contact Form
   document.getElementById("contactForm").addEventListener("submit", function(e) {
     e.preventDefault();
     document.getElementById("formSuccess").style.display = "block";
