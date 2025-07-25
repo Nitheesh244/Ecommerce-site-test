@@ -45,14 +45,12 @@
 <!-- Contact Form -->
 <section class="contact-section">
   <h2>Contact Us</h2>
-  <form name="contact" method="POST" netlify>
-  <input type="hidden" name="form-name" value="contact">
-  
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-  
-  <button type="submit">Submit</button>
+  <form name="contact" method="POST" data-netlify="true" action="/thank-you.html">
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Submit</button>
   </form>
 </section>
 
@@ -67,13 +65,6 @@
     current = (current + 1) % banners.length;
     banners[current].classList.add("active");
   }, 4000);
-
-  // Contact Form
-  document.getElementById("contactForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    document.getElementById("formSuccess").style.display = "block";
-    this.reset();
-  });
 </script>
 
 </body>
